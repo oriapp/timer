@@ -1,6 +1,7 @@
 let seconds = 0.00
         let minutes = 0
         let hours = 0;
+        
 
     function firstFunc(){
         let data = textInner.innerHTML = `seconds: ${seconds}  /  minutes: ${minutes}  /  hours: ${hours}`;
@@ -18,14 +19,15 @@ let seconds = 0.00
         if(minutes >= 59){
             seconds = 0;
             minutes = 0;
-            hours + 1;
+            hours = hours + 1;
             data
         }
     }
 
-    let intr = setInterval(firstFunc, 1000)
+    let intr = setInterval(firstFunc, 1)
     window.onload = function(){
         intr;
+        btn_start.disabled = true
     }
 
     window.onunload = function(){
@@ -35,7 +37,7 @@ let seconds = 0.00
     }
 
     function btnClickStart(){
-        setInterval(firstFunc, 1000)
+        setInterval(firstFunc, 1)
         btn_start.disabled = true
         btn_stop.disabled = false
         console.log("function has been started")
