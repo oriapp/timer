@@ -2,7 +2,7 @@ let seconds = 0.00
         let minutes = 0
         let hours = 0;
 
-    function go2(){
+    function firstFunc(){
         let data = textInner.innerHTML = `seconds: ${seconds}  /  minutes: ${minutes}  /  hours: ${hours}`;
 
 
@@ -23,7 +23,7 @@ let seconds = 0.00
         }
     }
 
-    let intr = setInterval(go2, 1000)
+    let intr = setInterval(firstFunc, 1000)
     window.onload = function(){
         intr;
     }
@@ -35,7 +35,7 @@ let seconds = 0.00
     }
 
     function btnClickStart(){
-        setInterval(go2, 1000)
+        setInterval(firstFunc, 1000)
         btn_start.disabled = true
         btn_stop.disabled = false
         console.log("function has been started")
