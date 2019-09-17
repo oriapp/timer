@@ -24,7 +24,7 @@ let seconds = 0.00
         }
     }
 
-    let intr = setInterval(firstFunc, 1)
+    let intr = setInterval(firstFunc, 1000)
     window.onload = function(){
         intr;
         btn_start.disabled = true
@@ -37,7 +37,7 @@ let seconds = 0.00
     }
 
     function btnClickStart(){
-        setInterval(firstFunc, 1)
+        setInterval(firstFunc, 1000)
         btn_start.disabled = true
         btn_stop.disabled = false
         console.log("function has been started")
