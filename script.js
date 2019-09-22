@@ -28,17 +28,18 @@ let seconds = 0.00
     }
 
     
-    window.onunload = function(){
+    (function(){
         localStorage.setItem('seconds', seconds)
         localStorage.setItem('minutes', minutes)
         localStorage.setItem('hours', hours)
-    }
+    })
 
 
     function btnClickStart(){
         setInterval(firstFunc, 1000)
         btn_start.disabled = true
         btn_stop.disabled = false
+        btn_lap.disabled = false
         console.log("function has been started")
     }
 
@@ -47,6 +48,7 @@ let seconds = 0.00
         clearInterval(intr)
         btn_stop.disabled = true
         btn_start.disabled = false
+        btn_lap.disabled = true
         console.log("function has been stopped")
     }
 
